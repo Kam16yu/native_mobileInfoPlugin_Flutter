@@ -11,8 +11,4 @@ Example:
 
 This will add a line like this to your package's pubspec.yaml (and run flutter pub upgrade):
 
-dependencies:
-    mobile_info:
-        git:
-            url: https://github.com/Kam16yu/native_mobileInfoPlugin_Flutter.git
-            ref: master
+![image](https://user-images.githubusercontent.com/91286611/201911297-5db141de-5951-4656-ac98-8507a414835d.png)
