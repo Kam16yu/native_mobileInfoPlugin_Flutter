@@ -8,6 +8,7 @@ void main() {
   runApp(const MyApp());
 }
 
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -16,13 +17,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
   final _mobileInfoPlugin = MobileInfo();
+
   Map<String, String> _deviceSpecifications = {};
   List<String> _acquiredSpecs = [];
 
   @override
   void initState() {
     super.initState();
+    //Obtaining data from plugin
     initPlatformState();
   }
 
@@ -32,6 +36,9 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
+      // Get map object with:
+      // keys - specification name
+      // values - specification info
       deviceSpecifications = await _mobileInfoPlugin.getSpecifications() ?? {};
     } on PlatformException {
       deviceSpecifications = {};
@@ -40,8 +47,11 @@ class _MyAppState extends State<MyApp> {
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
+
     setState(() {
+      // Update
       _deviceSpecifications = deviceSpecifications;
+      //
       _acquiredSpecs = deviceSpecifications.keys.toList();
     });
   }
@@ -80,10 +90,6 @@ class _MyAppState extends State<MyApp> {
             },
           ),
         ),
-        floatingActionButton: IconButton(
-            onPressed: () => initPlatformState(),
-            icon: const Icon(Icons.search),
-            splashColor: Colors.greenAccent),
       ),
     );
   }
