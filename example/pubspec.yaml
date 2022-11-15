@@ -20,7 +20,10 @@ dependencies:
 
   mobile_info:
     # When depending on this package from a real application you should use:
-    #   mobile_info: ^x.y.z
+    #git:
+    #  url: https://github.com/Kam16yu/native_mobileInfoPlugin_Flutter.git
+    #  ref: master
+
     # See https://dart.dev/tools/pub/dependencies#version-constraints
     # The example app is bundled with the plugin so we use a path dependency on
     # the parent directory to use the current plugin's version.

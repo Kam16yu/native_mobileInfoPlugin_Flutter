@@ -9,7 +9,7 @@ class MockMobileInfoPlatform
     implements MobileInfoPlatform {
 
   @override
-  Future<String?> getSpecifications() => Future.value('42');
+  Future<Map<String, String>?> getSpecifications() => Future.value({"Platform": "Android 10"});
 }
 
 void main() {
@@ -19,11 +19,11 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelMobileInfo>());
   });
 
-  test('getPlatformVersion', () async {
+  test('getSpecifications', () async {
     MobileInfo mobileInfoPlugin = MobileInfo();
     MockMobileInfoPlatform fakePlatform = MockMobileInfoPlatform();
     MobileInfoPlatform.instance = fakePlatform;
 
-    expect(await mobileInfoPlugin.getSpecifications(), '42');
+    expect(await mobileInfoPlugin.getSpecifications(), {"Platform": "Android 10"});
   });
 }

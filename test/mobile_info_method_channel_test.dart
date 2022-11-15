@@ -10,7 +10,7 @@ void main() {
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+      return {"Platform": "Android 10"};
     });
   });
 
@@ -18,7 +18,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await platform.getSpecifications(), '42');
+  test('getSpecifications', () async {
+    expect(await platform.getSpecifications(), {"Platform": "Android 10"});
   });
 }
