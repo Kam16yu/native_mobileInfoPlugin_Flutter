@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kam16yu.mobile_info_example">
    <application
-        android:label="mobile_info_example"
+        android:label="Mobile info"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
        <!-- If this receiver listens for broadcasts sent from the system or from
