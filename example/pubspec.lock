@@ -98,11 +98,9 @@ packages:
   mobile_info:
     dependency: "direct main"
     description:
-      path: "."
-      ref: master
-      resolved-ref: "481835aab0a60def787b936c7c835cbdfe95842b"
-      url: "https://github.com/Kam16yu/native_mobileInfoPlugin_Flutter.git"
-    source: git
+      path: ".."
+      relative: true
+    source: path
     version: "0.0.1"
   path:
     dependency: transitive

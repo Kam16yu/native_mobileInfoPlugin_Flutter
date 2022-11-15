@@ -7,9 +7,9 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockMobileInfoPlatform
     with MockPlatformInterfaceMixin
     implements MobileInfoPlatform {
-
   @override
-  Future<Map<String, String>?> getSpecifications() => Future.value({"Platform": "Android 10"});
+  Future<Map<String, String>?> getSpecifications() =>
+      Future.value({"Platform": "Android 10"});
 }
 
 void main() {
@@ -24,6 +24,7 @@ void main() {
     MockMobileInfoPlatform fakePlatform = MockMobileInfoPlatform();
     MobileInfoPlatform.instance = fakePlatform;
 
-    expect(await mobileInfoPlugin.getSpecifications(), {"Platform": "Android 10"});
+    expect(
+        await mobileInfoPlugin.getSpecifications(), {"Platform": "Android 10"});
   });
 }
