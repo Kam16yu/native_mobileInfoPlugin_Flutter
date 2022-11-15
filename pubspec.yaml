@@ -1,7 +1,6 @@
 name: mobile_info
 description: Plugin will obtain and show smartphone specifications.
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
@@ -36,8 +35,6 @@ flutter:
     platforms:
       android:
         package: com.kam16yu.mobile_info
-        pluginClass: MobileInfoPlugin
-      ios:
         pluginClass: MobileInfoPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
