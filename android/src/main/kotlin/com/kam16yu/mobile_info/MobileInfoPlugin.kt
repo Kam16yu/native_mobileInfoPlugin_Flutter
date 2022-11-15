@@ -1,6 +1,5 @@
 package com.kam16yu.mobile_info
 
-import android.os.BatteryManager
 import android.os.Build
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
