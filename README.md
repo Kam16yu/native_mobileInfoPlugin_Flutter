@@ -1,4 +1,5 @@
 # Mobile_info plugin
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
 Plugin obtain and show smartphone specifications. Use Android  platform-specific 
 implementations with Kotlin.
